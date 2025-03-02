@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Cold Wallet{% endblock %}
+{% block content %}
+    <section>
+        <div class="wallet-header">
+            <h2>BitSafe Cold-Wallet</h2>
+            <p class="wallet-address">
+                <span id="btc-address">{{ address[:5] }}...{{ address[-5:] }}</span>
+                <button onclick="copyAddress()" title="Copy Address">
+                <i class="fa-solid fa-copy"></i>
+                </button>
+            </p>
+        </div>
+        <div class="qr-section">
+            <img src="{{ url_for('generate_qr', btc_address=address) }}" alt="Bitcoin QR Code">
+        </div>
+    </section>
+    <section>
+        <a href="https://blockexplorer.one/bitcoin/mainnet/address/{{ g.wallet_address }}" target="_blank">
+            <button class="bal-btn">
+                View Wallet on Blockexplorer
+            </button>
+        </a>
+    </section>
+    <script>
+        function copyAddress() {
+        const address = "{{ address }}";
+        navigator.clipboard.writeText(address).then(() => {
+            alert("Address copied to clipboard!");
+        });
+        }
+    </script>
+{% endblock %}

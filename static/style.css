@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: #222;
+}
+main {
+    margin: auto;
+    width: 80%;
+}
+section {
+    margin: 20px 0;
+}
+
+.wallet-header {
+    border-bottom: solid 2px rgb(225, 65, 65);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.wallet-header h2 {
+    color: rgb(225, 65, 65);
+    margin-bottom: 5px;
+}
+.wallet-address {
+    color: whitesmoke;
+}
+.wallet-address button {
+    border: none;
+    background-color: transparent;
+    color: grey;
+    margin-left: 5px;
+}
+
+.qr-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.bal-btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background-color: rgb(225, 65, 65);
+    color: whitesmoke;
+    font-size: 1rem;
+    cursor: pointer;
+}
